@@ -21,6 +21,11 @@ class TestGetElementId(unittest.TestCase):
         tree = Tree(node)
         self.assertIsNone(tree.get_element_by_id('non-existent -id'))
 
-    def test_empty_tree(self)
+    def test_empty_tree(self):
+        tree = Tree(None)
+        self.assertIsNone(tree.get_element_id('non-existent-id'))
+
+if __name__ == '__main__':
+    unittest.main()
         
         
