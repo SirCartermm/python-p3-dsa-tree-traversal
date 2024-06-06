@@ -17,5 +17,10 @@ class TestGetElementId(unittest.TestCase):
         self.assertEqual(tree.get_element_by_id('child'2)['id'], 'child2')
 
     def test_node_not_found(self):
+        node = {'id': 'root', 'children': []}
+        tree = Tree(node)
+        self.assertIsNone(tree.get_element_by_id('non-existent -id'))
+
+    def test_empty_tree(self)
         
         
