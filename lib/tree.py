@@ -37,4 +37,8 @@ class Tree:
 
 
 
-        def get_element_by_id(self,)
+        def get_element_by_id(self, id):
+            queue = deque([self.node])
+            while queue:
+                node = queue.popleft()
+                
