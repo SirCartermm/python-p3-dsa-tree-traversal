@@ -41,4 +41,8 @@ class Tree:
             queue = deque([self.node])
             while queue:
                 node = queue.popleft()
+                if node['id'] == id:
+                    return node
+                queue.extend(node.get('children', []))
+              return None
                 
